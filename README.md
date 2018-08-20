@@ -3,7 +3,7 @@ AWS Certified Developer Associate -  Notes
 
 ## IAM
 * AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
-###Features at a glance
+#### Features at a glance
 * Shared access to your AWS account
 * Granular permissions
 * Secure access to AWS resources for applications that run on Amazon EC2
@@ -13,7 +13,7 @@ AWS Certified Developer Associate -  Notes
 * Integrated with many AWS services
 * Eventually Consistent
 * Free to use
-### Accesing IAM
+#### Accesing IAM
 * AWS Management Console
 * AWS Command Line Tools
 * AWS SDKs
