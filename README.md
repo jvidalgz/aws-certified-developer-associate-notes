@@ -76,7 +76,37 @@ Some AWS products have other ways to secure their resources
 * Amazon WorkSpaces: Users sign in to a desktop with a user name and password.
 * Amazon WorkDocs: Users get access to shared documents by signing in with a user name and password.
 
+### IAM Best Practices and Use Cases
+ * Lock Away Your AWS Account Root User Access Keys
+ * Create Individual IAM Users
+ * Use Groups to Assign Permissions to IAM Users
+ * Use AWS Defined Policies to Assign Permissions Whenever Possible
+ * Grant Least Privilege
+ * Use Access Levels to Review IAM Permissions
+ * Configure a Strong Password Policy for Your Users
+ * Enable MFA for Privileged Users
+ * Use Roles for Applications That Run on Amazon EC2 Instances
+ * Use Roles to Delegate Permissions
+ * Do Not Share Access Keys
+ * Rotate Credentials Regularly
+ * Remove Unnecessary Credentials
+ * Use Policy Conditions for Extra Security: restrict IP address, enable MFA
+ * Monitor Activity in Your AWS Account
+
+### Identities (Users, Groups, and Roles)
+* The AWS Account Root User
+* IAM Users
+* IAM Groups
+* IAM Roles 
+* Temporary Credentials
+
 ### Warnings
 * If a request to change some data is successful, the change is committed and safely stored. However, the change must be replicated across IAM, which can take some time. Such changes include creating or updating users, groups, roles, or policies. We recommend that you do not include such IAM changes in the critical, high-availability code paths of your application. 
 * Policies and Users: Actions or resources that are not explicitly allowed are denied by default.
 * You cannot attach a resource-based policy to an IAM identity.
+* Do not use your AWS account root user access key 
+* IAM Group are not truly an identity because it cannot be identified as a Principal in a resource-based or trust policy. 
+* IAM Roles does not have any credentials (password or access keys) associated with it.
+
+### Limits
+* Up to two access keys per IAM user 
