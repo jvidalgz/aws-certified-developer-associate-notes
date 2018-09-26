@@ -68,6 +68,52 @@ AWS Certified Developer Associate -  Notes
 * CIDR : 16-28
 * VPC Peering: 50 VPC Peers per VPC, up to 125 by request  
 
+## EC2
+* On-demand: paid for use
+* Reserved Intances:
+    * Standard
+    * Scheduled
+* Spot
+* Dedicated:
+    * Host
+    * Instance
+### EC2 - On-demand
+* Low cost and flexibility with no up front cost
+* Ideal for autoscaling groups and unpredictable workloads
+* Dev / Test
+
+### EC2 - Reserved Instance
+* Steady state and predictable usage
+* Aplications that need reserved capacity
+### Spot Instances
+* Flexible start and end times
+* Grid computing and HPC
+* Very low hourly compute cost
+
+### Dedicated Instances
+* Predictable performance
+* Complete Isolation
+* Most expensive
+
+### High Performance Computing (HPC)
+* Bath processing of compute intensive workloads
+* Requires high performance CPU, network and storage
+* Jumbo frames are typically required: Transport large amount of data quicker than over a traditional  network (a lot of I/O - NFS is suitable in this case)
+    * Jumbo frame: up to 9000 bytes of data (vs standard frame only 1500 bytes)
+* Supported on AWS through enhanced networking (single rout I/O virtualization (SR-IOV))
+### Placement Groups 
+* A logical grouping of instances in a single availability zone
+* Keep them as close as possible to each other in order to allow for low latency and high performance between these instances
+* Can span peered VPCs (but not at full performance)
+
+### Warning
+* Placement Groups: 
+    * Can't span multiple availability zones
+    * Reserved instances are supported on an instance level but you cannot explicity reserved CAPACITY for a placement group
+    * You can't merge them 
+### Limits
+* The name must be unique (like S3 unique name convention) 
+* Cannot be merged
 ## IAM
 * AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
 #### Features at a glance
